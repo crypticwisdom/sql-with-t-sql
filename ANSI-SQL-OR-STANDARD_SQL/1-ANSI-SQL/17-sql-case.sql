@@ -40,3 +40,9 @@ order by
     when city = 'Lagos' or city = 'lagos' then CustomerID
     else city
 end) desc, Country desc;
+
+
+update customers set CustomerName = Null where CustomerID = 1;
+select * from customers;
+
+select ISNULL(CustomerID * CustomerName, 0) from Customers where CustomerID = 1;
